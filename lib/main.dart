@@ -15,16 +15,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  RouteGenerator appRoutes = RouteGenerator();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      initialRoute: "/",
-      routes: {
-        "/": (context) => HomeScreen(),
-        "recipes": (context) => RecipesScreen(),
-      },
+      initialRoute: "home",
+      onGenerateRoute: appRoutes.generateRoutes,
     );
   }
 }

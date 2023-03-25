@@ -16,7 +16,7 @@ class RouteGenerator {
         //   builder: (context) => const RecipesScreen(),
         // );
 
-        return fadeNavTransition(RecipesScreen());
+        return slideNavTransition(RecipesScreen());
 
       default:
         return MaterialPageRoute(
