@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_demo/home.dart';
-import 'package:navigation_demo/not_found.dart';
-import 'package:navigation_demo/recipes.dart';
+import 'package:navigation_demo/screens/home.dart';
+import 'package:navigation_demo/screens/not_found.dart';
+import 'package:navigation_demo/screens/recipes.dart';
 import 'package:navigation_demo/routes/names.dart';
 
 class RouteGenerator {

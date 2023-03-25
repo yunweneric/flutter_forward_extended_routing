@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_demo/recipes.dart';
+import 'package:navigation_demo/components/app_btn.dart';
+import 'package:navigation_demo/screens/recipes.dart';
 import 'package:navigation_demo/routes/names.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,15 +15,28 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        color: Colors.teal,
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text("Homepage"),
-            ElevatedButton(
-              onPressed: () => Navigator.pushNamed(context, AppRoutes.recipes),
-              child: const Text("Route to Recipes"),
+            const Text(
+              "Homepage",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+              ),
+            ),
+            SizedBox(height: 20),
+            appButton(
+              context: context,
+              width: 200,
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RecipesScreen()),
+              ),
+              text: "Route to Recipes",
             )
           ],
         ),

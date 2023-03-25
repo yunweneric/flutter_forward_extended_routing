@@ -11,9 +11,13 @@ class _RecipeDetailsScreenState extends State<RecipeDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.teal,
+      ),
       body: Center(
-        child: Text("Recipes Details Screen"),
+        child: Text(
+          "Recipes Details Screen",
+        ),
       ),
     );
   }
