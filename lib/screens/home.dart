@@ -29,10 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
             appButton(
               context: context,
               width: 200,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => RecipesScreen()),
-              ),
+              onTap: () => Navigator.pushNamed(context, AppRoutes.recipes),
               text: "Route to Recipes",
             )
           ],

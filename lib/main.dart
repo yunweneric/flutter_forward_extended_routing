@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_demo/routes/app_routing.dart';
 import 'package:navigation_demo/screens/home.dart';
+import 'package:navigation_demo/screens/recipes.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,11 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: HomeScreen(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => HomeScreen(),
+        "recipes": (context) => RecipesScreen(),
+      },
     );
   }
 }
