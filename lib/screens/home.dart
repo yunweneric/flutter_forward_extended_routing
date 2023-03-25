@@ -23,10 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             const Text(
               "Homepage",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-              ),
+              style: TextStyle(color: Colors.white, fontSize: 30),
             ),
             SizedBox(height: 20),
             appButton(
