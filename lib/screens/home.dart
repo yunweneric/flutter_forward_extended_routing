@@ -15,6 +15,28 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.teal,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            const DrawerHeader(
+              child: CircleAvatar(radius: 30, backgroundColor: Colors.teal),
+            ),
+            ListTile(
+              title: const Text('Home'),
+              leading: Icon(Icons.home),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text('Profile'),
+              leading: Icon(Icons.person),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (value) => setState(() {
           selectedIndex = value;
